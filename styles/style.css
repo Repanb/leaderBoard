@@ -1,0 +1,215 @@
+/* global section */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #F3F1FF;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+/* end global section */
+/* end nav section */
+header{
+    background-color: blue;
+}
+.main-nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: px;
+    align-items: center;
+    width: 1000px;
+    margin: 0 auto;
+}
+.logo img{
+    border-radius: 50%;
+    box-shadow: 1px 1px 20px 3px gray;
+}
+nav ul{
+    display: flex;
+    /* margin-right: 100px; */
+    justify-content: flex-end;
+    align-items: center;
+}
+li{
+    list-style: none;
+    font-weight: 700;
+    padding: 20px;
+    box-sizing: border-box;
+}
+li> a{
+    color: white;
+}
+nav li:hover {
+    background-color: gray;
+}
+li:nth-last-child(1){
+    padding: 0;
+}
+li:nth-last-child(1):hover{
+    border-radius: 50%;
+}
+.navimage{
+    border: 3px solid;
+    border-radius: 50%;
+}
+.navimage:hover{
+    background-color: gray;
+    padding: 0;
+}
+/* end nav section */
+/* start top section */
+#topSection, #coursesSection{
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+.container, .courseContainer{
+    width: 870px;
+    padding: 30px 30px 0;
+    background-color: white;
+}
+.topSectionTitle, .blogSectionTitle, .courseHeading{
+    margin-bottom: 30px;
+    color: #562EFF;
+}
+.players, .courses{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 30px;
+}
+.player, article{
+    display: flex;
+    align-items: center;
+}
+.player:hover{
+    text-shadow: 4px 2px 10px  lightblue;
+}
+.player img{
+    width: 56px;
+}
+.player img:hover{
+    border: 5px solid lightblue;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.player h3{
+    margin-left: 15px;
+    font-size: 20px;
+    color: rgb(77, 81, 107);
+}
+hr{
+    border: 1px solid #d1d1d1;
+}
+/* end top section */
+/* start blog section */
+.blogSectionTitle{
+    margin-top: 30px;
+}
+.blogGroup{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    padding-bottom: 40px;
+}
+.blog{
+    border: 2px solid rgb(231, 230, 230);
+    border-radius: 10px;
+    box-shadow: 1px 1px 15px 1px lightgray;
+}
+article{
+    padding: 2px;
+}
+article img{
+    width: 177px;
+}
+.blogInfo{
+    margin-left: 15px;
+}
+span{
+    color: gray;
+}
+/* end blog section */
+/* start course section */
+.courseItem{
+    padding: 10px 20px;
+    border: 2px solid rgb(238, 236, 236);
+    border-radius: 15px;
+    box-shadow: 1px 1px 15px 1px lightgray;
+}
+.thumbnail img{
+    width: 224px;
+}
+.courseTitle, .courseAuthor{
+    line-height: 35px;
+}
+.fa-star.filled{
+    color: #FFC014;
+}
+.fa-star.empty{
+    color: #AEAEAE;
+}
+.ratingDuration{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.courseDuration{
+    color: #FF4A60;
+    background-color: #FEE5DF;
+    padding: 3px;
+    border-radius: 10px;
+}
+/* end course section */
+/* For Mobile */
+@media only screen  and (max-width: 688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses,.blogGroup{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main-nav{
+        width: 95%;    
+        }
+        li{
+            padding: 20px 5px;
+        }
+        .navimage{
+            width: 50px;
+            height: 50px;
+        }
+        .player{
+            flex-direction: column;
+            border: 2px solid lightgray;
+            padding: 3px;
+            border-radius: 10px;
+            box-shadow: 1px 1px 10px 3px lightgray;
+        }
+}
+/* for tablet */
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .players, .courses,.blogGroup{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header{
+        width: 100%;
+    }
+    .main-nav{
+        width: 90%;
+        }
+        li{
+            padding: 20px 15px;
+        }
+            .player{
+                flex-direction: column;
+                padding: 3px;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px 3px lightgray;
+            }
+}
